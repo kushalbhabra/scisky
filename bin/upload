@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+#checking root privileges
+user=$(whoami)
+if [ $user != root ];
+then
+echo User needs root privileges
+exit
+else
+echo Good man, you are root
+fi
+echo hi
+
+echo `pwd`
+adb install -r Sky.apk
